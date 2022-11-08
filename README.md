@@ -1055,6 +1055,76 @@ Save Cart Items
 
 9.Define useEffect, setCartItemsCount to the value already in the header 
 
+  
+
+Create Login form  
+
+1.Go to pages and go to login .js and press rfc to create a login componenet and make login screen 
+
+2.<div>Login</div> 
+
+3.<Layout title=”login”>, </Layout> 
+
+4.<form className=’mx-auto max-w-screen’></form> this means it will be 768px 
+
+5. <h1 className=”mb-4 text-xl">Login</h1> 
+
+6. <label htmlFor=”email”>Email</label> 
+
+7.<input type=”email” className=”w-full" id=”email” autoFocus> 
+
+8.<div className=”mb-4”>,  
+
+	<button className=”primary-button”>Login</button> 
+
+<label htmlFor=”email”>Email</label> 
+
+9.  <div className=”mb-4”> <label htmlFor=”password”>Password</label> Create 
+
+10. <input type=”password” className=”w-full” id=”password” autoFocus> 
+
+11.<div className=mb-4"> <button className=”primary-button”>Login</button> 
+
+12.Add don’t have an account add Don&aposit have an account> &nbsp don’t have an account. 
+
+13.Login?/shipping and button onClick={() => router.push(‘login?shipping’)} className=”primary-button w-full"> Checkout </button>  
+
+14.Go to global css, and go to input,select,textarea{ 
+
+	@apply rounded border p-2 outline-none ring-indigo-300 focus:ring 
+
+} 
+
+15.NPM install react-hook-form  
+
+16.Import {useForm} from ‘react-hook-form'  
+
+17.const { 
+
+HandleSubmit,  
+
+Register, 
+
+FormState:{errors}, }= useForm(); 
+
+18.Onsubmit handler is where you have to use onSubmit={handleSubmit{submitHandler}} 
+
+19.const submitHandler = ({email, password}) => { 
+
+ 
+
+} 
+
+20.<Input type=”email” {...register(‘email’, {required: ‘Please enter email’)} </input> 
+
+21.{errors.email && (<div>{errors.email.message}</div>)} 
+
+22. Value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/i,] 
+
+23.’Please enter valid email’ 
+
+24.console.log{email,password} 
+
  
 
  
