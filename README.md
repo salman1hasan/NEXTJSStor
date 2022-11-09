@@ -1125,6 +1125,79 @@ FormState:{errors}, }= useForm();
 
 24.console.log{email,password} 
 
+Add MongoDB 
+
+1.Install mongoose  
+
+2.Go to mongodb 
+
+3.click create and click on database 
+
+4. Free and then create an account 
+
+5. Add a user profile 
+
+6. Connect the link using mongodburi 
+
+7.Import mongoose from ‘mongoose’; 
+
+8. Const connection ={} 
+
+9.Async function connect(){ 
+
+If(connection.isConnected){ 
+
+Console.log(‘already connected’); 
+
+} 
+
+Return; 
+} 
+
+10.if(mongoose.connection.length>0), connection.isConnected = mongoose.connections[0].readyState; 
+
+11.If connection.isConnected=1 console.log(‘use previous connection’), and return; 
+
+12.Await mongoose.disconnect(); 
+
+13.Const db = await mongoose.connect and process.env MONGODB_URI 
+
+14.Async function disconnect(){ 
+
+15.If(connection.isConnected){ 
+
+16.If(process.env.NODE_ENV===’production’){ 
+
+17.Await mongoose.disconnect(); 
+
+Connection.isConnected=false; 
+
+18.else, console.log(‘not disconnected’); 
+
+19.Add a const db = connect,disconnect and export default db; 
+
+20.Go to data and go to users and add name email password and isadmin 
+
+21.Download bcryptjs  
+
+22.Then go to pages api seed.js and add import db from utils and a const hander async request call and response call with an await db.connect(); 
+
+23.And just like a reactjs project ad User.js in model file and all the information a user need to sign 
+
+24.Const userSchema and = new mongoose.schema and add name,email password is admin and a timestamp  
+
+25.Add const User = mongoose.models.User || mongoose.model(‘User’,userSchema) 
+
+26.Seed.js and add import db from “../utils/db” 
+
+27. Await and add User.deleteMany() and await User.insertMany(data.users) 
+
+28.Await db.disconnect(); and res.send message seeded succesfully 
+
+29.Export default handler; 
+
+30.And all the files should be connected and check with a seeder to see if everything works. 
+
  
 
  
